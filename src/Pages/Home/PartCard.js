@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PartCard = ({part}) => {
-    const { name, description, minimumOrder, availableQuntity, unitPrice,img}= part;
+    const { _id, name, description, minimumOrder, availableQuntity, unitPrice,img}= part;
+
+    const navigate = useNavigate();
+
+    const navigateToPurchase = id => {
+        navigate(`/part/${id}`);
+    }
 
 
     return (
@@ -15,7 +22,7 @@ const PartCard = ({part}) => {
                     <p>Available Quantity: {availableQuntity}</p>
                     <p>Per unit Price: {unitPrice}</p>
                     <div class="card-actions justify-center">
-                        <button class="btn btn-primary">Purchase</button>
+                        <button onClick={() => navigateToPurchase(_id)} class="btn btn-primary">Purchase</button>
                     </div>
                 </div>
             </div>
