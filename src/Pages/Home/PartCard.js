@@ -13,8 +13,8 @@ const PartCard = ({part}) => {
 
     return (
         <div>
-            <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src={img} alt="Shoes" /></figure>
+            <div class="card card-compact bg-base-100 shadow-xl">
+                <figure><img className='lg:w-80' src={img} alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title justify-center">{name}</h2>
                     <p>{description}</p>

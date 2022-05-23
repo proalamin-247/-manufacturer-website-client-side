@@ -10,6 +10,7 @@ import Reviews from './Pages/Home/Reviews';
 import Purchase from './Pages/Purchase/Purchase';
 import PrivateRoute from './Pages/Login/PrivateRoute';
 import NotFound from './Pages/NotFound/NotFound';
+import AddReviews from './Pages/AddReviews/AddReviews';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </PrivateRoute>
         }></Route>
         <Route path='reviews' element={<Reviews></Reviews>}></Route>
+        <Route path='addReviews' element={<AddReviews></AddReviews>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
