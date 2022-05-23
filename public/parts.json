@@ -1,0 +1,30 @@
+[
+        {
+          "_id": 1,
+          "name": "Brack Swoe",
+          "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+          "minimumOrder": "30",
+          "availableQuntity": "70",
+          "unitPrice": "1400",
+          "img": "https://www.mrstrongmotors.com/wp-content/uploads/2021/08/BM-77-REAR-WHEEL.jpg"
+        },
+        {
+          "_id": 2,
+          "name": "Brack Swoe",
+          "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+          "minimumOrder": "30",
+          "availableQuntity": "70",
+          "unitPrice": "1400",
+          "img": "https://www.mrstrongmotors.com/wp-content/uploads/2021/08/BM-77-REAR-WHEEL.jpg"
+        },
+        {
+          "_id": 3,
+          "name": "Brack Swoe",
+          "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+          "minimumOrder": "30",
+          "availableQuntity": "70",
+          "unitPrice": "1400",
+          "img": "https://www.mrstrongmotors.com/wp-content/uploads/2021/08/BM-77-REAR-WHEEL.jpg"
+        }
+        
+    ]
