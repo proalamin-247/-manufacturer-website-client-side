@@ -7,6 +7,20 @@ const AddReviews = () => {
 
     const onSubmit = data => {
         console.log(data.name, data.city, data.review, data.ratting, data.img);
+        console.log(data)
+
+        const url = `http://localhost:5001/review`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+
+            })
         reset();
     };
 
