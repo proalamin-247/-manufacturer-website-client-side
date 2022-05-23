@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Pages/Sheard/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>manufacturer-website bike</h1>
+      <Navbar></Navbar>
+      
     </div>
   );
 }
