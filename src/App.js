@@ -5,17 +5,21 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Blogs from './Pages/Blogs/Blogs';
+import SignUp from './Pages/Login/SignUp';
+import Reviews from './Pages/Home/Reviews';
 
 function App() {
   return (
     <div className="App">
-     <Navbar></Navbar>
-     <Routes>
-       <Route path='/' element={<Home></Home>}></Route>
-       <Route path='/home' element={<Home></Home>}></Route>
-       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-       <Route path='/login' element={<Login></Login>}></Route>
-     </Routes>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='reviews' element={<Reviews></Reviews>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signUp' element={<SignUp></SignUp>}></Route>
+      </Routes>
 
     </div>
   );
