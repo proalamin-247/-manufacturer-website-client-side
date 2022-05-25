@@ -3,6 +3,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../hooks/useToken';
 import Loading from '../Sheard/Loading';
 
 
@@ -16,27 +17,24 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [token] = useToken(user || gUser);
+
     let signINErrorMessage;
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        if (user || gUser) {
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [user, gUser, from, navigate])
+    }, [token, from, navigate])
 
     if (loading || gLoading) {
         return <Loading></Loading>
     }
     if (error || gError) {
         signINErrorMessage = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
-    }
-
-
-    if (user || gUser) {
-        navigate(from, { replace: true });
     }
 
     const onSubmit = data => {
@@ -96,7 +94,7 @@ const Login = () => {
                         {signINErrorMessage}
                         <input className='btn w-full max-w-xs' type="submit" value="Login" />
                     </form>
-                    <p>New to Doctors Portal? <Link className='text-secondary' to='/signUp'>Create New Account</Link></p>
+                    <p>New to User? <Link className='text-secondary' to='/signUp'>Create New Account</Link></p>
 
                     <div className="divider">OR</div>
                     <button onClick={() => signInWithGoogle()} className="btn btn-outline">Continue With Google</button>

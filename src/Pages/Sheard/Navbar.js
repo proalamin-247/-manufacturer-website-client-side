@@ -9,13 +9,13 @@ const Navbar = () => {
 
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken');
     };
 
     const menuItems = <>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/about">Parts</Link></li>
         <li><Link to="/reviews">Reviews</Link></li>
-        {/* <li><Link to="/addReviews">Add Reviews</Link></li> */}
         <li><Link to="/blogs">Blogs</Link></li>
         {
             user && <li><Link to='/dashboard'>Dashboard</Link></li>

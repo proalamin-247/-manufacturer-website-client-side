@@ -6,8 +6,6 @@ const AddReviews = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        console.log(data.name, data.city, data.review, data.ratting, data.img);
-        console.log(data)
 
         const url = `http://localhost:5000/review`;
         fetch(url, {

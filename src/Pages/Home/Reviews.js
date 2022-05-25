@@ -23,7 +23,7 @@ const Reviews = () => {
                 }
             </div>
             <Link to='/reviews' className="btn btn-outline btn-primary mt-5 mr-2">Show All Review</Link>
-            <Link to='/addReviews' className="btn btn-outline btn-primary mt-5">Add a review</Link>
+            <Link to='/dashboard/addReviews' className="btn btn-outline btn-primary mt-5">Add a review</Link>
         </div>
     );
 };
