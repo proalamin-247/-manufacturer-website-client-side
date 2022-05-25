@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Review from './Review'
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5001/review')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
@@ -21,6 +22,8 @@ const Reviews = () => {
                     ></Review>)
                 }
             </div>
+            <Link to='/reviews' class="btn btn-outline btn-primary mt-5 mr-2">Show All Review</Link>
+            <Link to='/addReviews' class="btn btn-outline btn-primary mt-5">Add a review</Link>
         </div>
     );
 };

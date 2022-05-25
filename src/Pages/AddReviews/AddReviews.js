@@ -9,7 +9,7 @@ const AddReviews = () => {
         console.log(data.name, data.city, data.review, data.ratting, data.img);
         console.log(data)
 
-        const url = `http://localhost:5001/review`;
+        const url = `http://localhost:5000/review`;
         fetch(url, {
             method: 'POST',
             headers: {
