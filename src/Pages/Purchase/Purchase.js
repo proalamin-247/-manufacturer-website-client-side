@@ -26,7 +26,9 @@ const Purchase = () => {
             userEmail: user?.email,
             userPhone: event.target.phone.value,
             userAddress: event.target.address.value,
+            quantity: event.target.quantity.value
         }
+        console.log(orderDetails);
 
         const url = `http://localhost:5000/order`;
         fetch(url, {
@@ -41,10 +43,9 @@ const Purchase = () => {
 
             })
 
-        document.getElementById('address').value = ' ';
-        document.getElementById('phone').value = ' ';
-
-        console.log(orderDetails);
+        document.getElementById('quantity').value = '';
+        document.getElementById('address').value = '';
+        document.getElementById('phone').value = '';
     }
     return (
         <div className='grid justify-items-center lg:mt-5'>
@@ -65,6 +66,7 @@ const Purchase = () => {
                     <input type="text" name='product' value={part.name} disabled className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='name' value={user?.displayName} disabled className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='email' value={user?.email} disabled className="input input-bordered w-full max-w-xs" />
+                    <input type="number" name='quantity' id='quantity' placeholder="must be minimumOrder < order and availableQuntity > order quantity" required className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='phone' id='phone' placeholder="Phone Number" required className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='address' id='address' placeholder="Address" required className="input input-bordered w-full max-w-xs" />
                     <input type="submit" value='Make Payment' placeholder="Type here" className="btn btn-secondary w-full max-w-xs my-2" />
