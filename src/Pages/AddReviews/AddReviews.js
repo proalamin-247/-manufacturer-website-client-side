@@ -47,7 +47,7 @@ const AddReviews = () => {
                             <label className="label">
                                 <span className="label-text">Review</span>
                             </label>
-                            <textarea class="textarea textarea-bordered" placeholder="Bio" {...register("review")}></textarea>
+                            <textarea className="textarea textarea-bordered" placeholder="Bio" {...register("review")}></textarea>
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
