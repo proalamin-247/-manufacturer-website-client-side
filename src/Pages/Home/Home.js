@@ -6,6 +6,7 @@ import BusinessSummary from './BusinessSummary';
 import Parts from './Parts';
 
 import Reviews from './Reviews';
+import SendMessage from './SendMessage';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <BusinessSummary></BusinessSummary>
             <Reviews></Reviews>
             <Qna></Qna>
+            <SendMessage></SendMessage>
             <Footer></Footer>
         </div>
     );
