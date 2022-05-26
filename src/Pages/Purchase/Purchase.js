@@ -10,7 +10,7 @@ const Purchase = () => {
 
     const [part, setPart] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/part/${partId}`;
+        const url = `https://polar-harbor-29275.herokuapp.com/part/${partId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setPart(data));
@@ -30,7 +30,7 @@ const Purchase = () => {
         }
         console.log(orderDetails);
 
-        const url = `http://localhost:5000/order`;
+        const url = `https://polar-harbor-29275.herokuapp.com/order`;
         fetch(url, {
             method: 'POST',
             headers: {

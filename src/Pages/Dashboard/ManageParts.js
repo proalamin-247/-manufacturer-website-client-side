@@ -4,10 +4,10 @@ import useParts from '../../hooks/useParts';
 const ManageParts = () => {
     const [parts, setParts] = useParts([]);
 
-    const handleDelete = id=>{
+    const handleDelete = id => {
         const proceed = window.confirm('Are you over sure!!');
         if (proceed) {
-            const url = `http://localhost:5000/part/${id}`;
+            const url = `https://polar-harbor-29275.herokuapp.com/part/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -25,7 +25,7 @@ const ManageParts = () => {
             <h1 className='text-3xl font-bold py-2'>Warehouse stock Product: {parts.length}</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
-                    parts.map(part => 
+                    parts.map(part =>
                         <div className="card card-compact bg-base-100 shadow-xl">
                             <figure><img className='lg:w-80' src={part.img} alt="Shoes" /></figure>
                             <div className="card-body">

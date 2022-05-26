@@ -5,7 +5,7 @@ import PartCard from './PartCard';
 const Parts = () => {
     const [parts, setParts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/part')
+        fetch('https://polar-harbor-29275.herokuapp.com/part')
             .then(res => res.json())
             .then(data => setParts(data));
     }, [])
@@ -21,7 +21,7 @@ const Parts = () => {
                     ></PartCard>)
                 }
             </div>
-        <Link to='/allparts' className="btn btn-outline btn-primary mt-5 mr-2 mb-5">Show All Parts</Link>
+            <Link to='/allparts' className="btn btn-outline btn-primary mt-5 mr-2 mb-5">Show All Parts</Link>
         </div>
     );
 };
