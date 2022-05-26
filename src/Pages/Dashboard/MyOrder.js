@@ -1,17 +1,35 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrder = () => {
 
     const [orders, setOrders] = useState([]);
     const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?userEmail=${user.email}`)
-                .then(res => res.json())
-                .then(data => setOrders(data));
+            fetch(`http://localhost:5000/order?userEmail=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => {
+                    if (res.status === 401 || res.status === 403) {
+                        navigate('/');
+                        signOut(auth);
+                        localStorage.removeItem('accessToken');
+                    }
+                    return res.json()
+                })
+                .then(data => {
+
+                    setOrders(data)
+                });
         }
     }, [user])
 
@@ -32,14 +50,14 @@ const MyOrder = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map(o=>
-                                <tr>
+                            orders.map(o =>
+                                <tr key={o._id}>
                                     <td>{o.partName}</td>
                                     <th>{o.userName}</th>
                                     <td>{o.quantity}</td>
                                     <td>{o.userPhone}</td>
                                     <td>{o.userAddress}</td>
-                                </tr>    
+                                </tr>
                             )
                         }
                     </tbody>

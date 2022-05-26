@@ -62,14 +62,14 @@ const Purchase = () => {
                     </div>
                 </div>
 
-                <form onSubmit={handalePurchase} className='grid grid-cols-1 gap-3 justify-items-center mt-10 w-full h-100'>
+                <form onSubmit={handalePurchase} className='grid grid-cols-1 gap-3 justify-items-center mt-10 '>
                     <input type="text" name='product' value={part.name} disabled className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='name' value={user?.displayName} disabled className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='email' value={user?.email} disabled className="input input-bordered w-full max-w-xs" />
                     <input type="number" name='quantity' id='quantity' placeholder="must be minimumOrder < order and availableQuntity > order quantity" required className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='phone' id='phone' placeholder="Phone Number" required className="input input-bordered w-full max-w-xs" />
                     <input type="text" name='address' id='address' placeholder="Address" required className="input input-bordered w-full max-w-xs" />
-                    <input type="submit" value='Make Payment' placeholder="Type here" className="btn btn-secondary w-full max-w-xs my-2" />
+                    <input type="submit" value='Make Payment' placeholder="Type here" className="btn btn-secondary w-64 max-w-xs my-2" />
                 </form>
             </div>
         </div>
