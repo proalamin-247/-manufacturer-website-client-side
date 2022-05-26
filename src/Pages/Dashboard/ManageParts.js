@@ -13,7 +13,6 @@ const ManageParts = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     const remainig = parts.filter(part => part._id !== id);
                     setParts(remainig);
                 })

@@ -28,7 +28,6 @@ const Purchase = () => {
             userAddress: event.target.address.value,
             quantity: event.target.quantity.value
         }
-        console.log(orderDetails);
 
         const url = `https://polar-harbor-29275.herokuapp.com/order`;
         fetch(url, {
@@ -56,9 +55,9 @@ const Purchase = () => {
                     <figure><img src={part.img} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title justify-center">{part.name}</h2>
-                        <p>Minimum Order: {part.minimumOrder}</p>
-                        <p>Available Quantity: {part.availableQuntity}</p>
-                        <p>Per unit Price: {part.unitPrice}</p>
+                        <p>Minimum Order: {part.miniumOrder}</p>
+                        <p>Available Quantity: {part.availableQuantity}</p>
+                        <p>Per unit Price: {part.perUnitPrice}</p>
                     </div>
                 </div>
 

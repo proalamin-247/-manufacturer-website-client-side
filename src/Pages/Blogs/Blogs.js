@@ -52,7 +52,7 @@ const Blogs = () => {
                                 data-bs-target="#panelsStayOpen-collapseOne3" aria-expanded="false"
                                 aria-controls="panelsStayOpen-collapseOne3">
                                 How does prototypical inheritance work?
-                                </button>
+                            </button>
                         </h2>
                         <div id="panelsStayOpen-collapseOne3" className="accordion-collapse collapse grid justify-items-start leading-8 p-3"
                             aria-labelledby="panelsStayOpen-headingOne3">
@@ -68,13 +68,13 @@ const Blogs = () => {
                                 data-bs-target="#panelsStayOpen-collapseOne1" aria-expanded="false"
                                 aria-controls="panelsStayOpen-collapseOne1">
                                 What is a unit test?Why should write unit tests?
-                                </button>
+                            </button>
                         </h2>
                         <div id="panelsStayOpen-collapseOne1" className="accordion-collapse collapse grid justify-items-start leading-8 p-3"
                             aria-labelledby="panelsStayOpen-headingOne1">
                             <p>UNIT TESTING is a type of software testing where individual units or components of a software are tested. The purpose is to validate that each unit of the software code performs as expected. Unit Testing is done during the development (coding phase) of an application by the developers. Unit Tests isolate a section of code and verify its correctness. A unit may be an individual function, method, procedure, module, or object.</p>
                             <p>Unit Testing is important because software developers sometimes try saving time doing minimal unit testing and this is myth because inappropriate unit testing leads to high cost Defect fixing during System Testing, Integration Testing and even Beta Testing after application is built. If proper unit testing is done in early development, then it saves time and money in the end.</p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ const Blogs = () => {
                         </h2>
                         <div id="panelsStayOpen-collapseOne2" className="accordion-collapse collapse grid justify-items-start leading-8 p-3"
                             aria-labelledby="panelsStayOpen-headingOne2">
-                            <div class="mockup-code">
+                            <div className="mockup-code">
                                 <pre data-prefix="1"><code>const[products, setProducts]= useState([])</code></pre>
                             </div>
                             <p>

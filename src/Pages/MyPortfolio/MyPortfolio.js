@@ -3,11 +3,11 @@ import React from 'react';
 const MyPortfolio = () => {
     return (
         <div className='container'>
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content flex-col lg:flex-row">
-                    <img src="https://i.ibb.co/CvyLtF4/me.jpg" class="max-w-md rounded-lg shadow-2xl" />
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row">
+                    <img src="https://i.ibb.co/CvyLtF4/me.jpg" className="max-w-md rounded-lg shadow-2xl" />
                     <div className='text-left'>
-                        <h1 class="text-4xl font-bold">MD AL AMIN</h1>
+                        <h1 className="text-4xl font-bold">MD AL AMIN</h1>
                         <p className='text-2xl'>Front-Eeb Developer</p>
                         <div className='py-3'>
                             <p >E-mail :  pro.alamin247@gmail.com </p>
