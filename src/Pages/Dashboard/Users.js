@@ -23,10 +23,8 @@ const Users = () => {
                 <table class="table w-full">
                     <thead>
                         <tr>
-                            <th>Num</th>
                             <th>Email</th>
                             <th>Admin</th>
-                            <th>Remove Admin</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +32,7 @@ const Users = () => {
                             users.map(user => <UserRow
                                 key={user._id}
                                 user={user}
+                                index
                                 refetch={refetch}
                             ></UserRow>)
                         }
