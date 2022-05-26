@@ -15,6 +15,7 @@ import MyOrder from './Pages/Dashboard/MyOrder';
 import Users from './Pages/Dashboard/Users';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import RequirAdmin from './Pages/Login/RequirAdmin';
 
 function App() {
   return (
@@ -29,13 +30,14 @@ function App() {
           </PrivateRoute>
         }></Route>
         <Route path='reviews' element={<AllReviews></AllReviews>}></Route>
-        
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
         <Route path='/dashboard' element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='addReviews' element={<AddReviews></AddReviews>}></Route>
-          <Route path='users' element={<Users></Users>}></Route>
+          <Route path='users' element={
+            <RequirAdmin><Users></Users></RequirAdmin>
+          }></Route>
         </Route>
 
         <Route path='/login' element={<Login></Login>}></Route>
