@@ -18,6 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import RequirAdmin from './Pages/Login/RequirAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import AllPart from './Pages/AllPart/AllPart';
+import ManageParts from './Pages/Dashboard/ManageParts';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path='users' element={
             <RequirAdmin><Users></Users></RequirAdmin>
           }></Route>
+          <Route path='manageParts' element={<ManageParts></ManageParts>}></Route>
         </Route>
 
         <Route path='/login' element={<Login></Login>}></Route>
