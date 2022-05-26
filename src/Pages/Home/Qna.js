@@ -6,18 +6,18 @@ const qna = () => {
             <h1 className="text-center text-3xl">Simple QNA and <span className='text-primary'>all are Benefits</span></h1>
             <div className="row  m-5">
                 <div className="col-md-6 col-12">
-                    <div className="accordion" id="accordionPanelsStayOpenExample">
-                        <div className="accordion-item">
-                            <h2 className="accordion-header" id="panelsStayOpen-headingOne">
+                    <div className="accordion " id="accordionPanelsStayOpenExample ">
+                        <div className="accordion-item ">
+                            <h2 className="accordion-header " id="panelsStayOpen-headingOne">
                                 <button className="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                                     aria-controls="panelsStayOpen-collapseOne">
                                     Which market top motorcycle brand your top client?
                                 </button>
                             </h2>
-                            <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show"
+                            <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show "
                                 aria-labelledby="panelsStayOpen-headingOne">
-                                <div className="accordion-body">
+                                <div className="accordion-body ">
                                     The motorcycle parts we have developed for the applicable brands include:HONDA、YAMAHA、SUZUKI、BAJAJ、 HAOJIN、HAOJUE、ZONGSHEN、LONGXIN and LIFAN etc. in Main-engine Market and After-Sale-Market.With more than 500 cooperative suppliers
                                 </div>
                             </div>
