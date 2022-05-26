@@ -19,6 +19,8 @@ import RequirAdmin from './Pages/Login/RequirAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import AllPart from './Pages/AllPart/AllPart';
 import ManageParts from './Pages/Dashboard/ManageParts';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 function App() {
   return (
@@ -35,9 +37,11 @@ function App() {
         <Route path='allparts' element={<AllPart></AllPart>}></Route>
         <Route path='reviews' element={<AllReviews></AllReviews>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
 
         <Route path='/dashboard' element={<PrivateRoute><Dashboard></Dashboard></PrivateRoute>}>
-          <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='order' element={<MyOrder></MyOrder>}></Route>
           <Route path='addReviews' element={<AddReviews></AddReviews>}></Route>
           <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
           <Route path='users' element={
