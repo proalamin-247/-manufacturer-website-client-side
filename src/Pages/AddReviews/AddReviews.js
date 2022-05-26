@@ -33,31 +33,31 @@ const AddReviews = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs" {...register("name")} />
+                            <input type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs" required {...register("name")} />
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">City</span>
                             </label>
-                            <input type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs" {...register("city")} />
+                            <input type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs" required {...register("city")} />
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Review</span>
                             </label>
-                            <textarea className="textarea textarea-bordered" placeholder="Bio" {...register("review")}></textarea>
+                            <textarea className="textarea textarea-bordered" placeholder="Bio" required {...register("review")}></textarea>
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Ratting </span>
                             </label>
-                            <input type="number" placeholder="Your ratting Out of 10" className="input input-bordered w-full max-w-xs" {...register("ratting")} />
+                            <input type="number" placeholder="Your ratting Out of 10" required className="input input-bordered w-full max-w-xs" {...register("ratting")} />
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Image</span>
                             </label>
-                            <input type="text" placeholder="img link (90 X 90 pixels)" className="input input-bordered w-full max-w-xs" {...register("img")} />
+                            <input type="text" placeholder="img link (90 X 90 pixels)" required className="input input-bordered w-full max-w-xs" {...register("img")} />
                         </div>
                         <input className='btn w-full max-w-xs mt-5' type="submit" value="Submit" />
                     </form>
