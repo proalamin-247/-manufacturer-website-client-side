@@ -17,6 +17,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RequirAdmin from './Pages/Login/RequirAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import AllPart from './Pages/AllPart/AllPart';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Purchase></Purchase>
           </PrivateRoute>
         }></Route>
+        <Route path='allparts' element={<AllPart></AllPart>}></Route>
         <Route path='reviews' element={<AllReviews></AllReviews>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
